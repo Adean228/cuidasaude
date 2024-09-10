@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuida Saúde</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body class="light-theme">
+    <header>
+        <div class="profile-pic">
+            <img src="perfil.jpeg" alt="Foto do Perfil">
+        </div>
+        <div class="welcome">
+            <h1>Olá, Marcos!</h1>
+            <div class="icons">
+                <span class="heart">❤️</span>
+                <span class="rating">5.0⭐</span>
+                <span class="bell">🔔</span>
+            </div>
+        </div>
+        <button id="theme-toggle" onclick="toggleTheme()">🌙 Mudar Tema</button>
+    </header>
+
+    <main>
+        <button class="solicitar-btn" onclick="solicitarAtendimento()">Solicitar Atendimento</button>
+        
+        <section class="agenda">
+            <h2>Procedimentos Agendados</h2>
+            <p>Nenhum agendamento</p>
+        </section>
+
+        <section class="avaliacao">
+            <div class="sua-avaliacao">
+                <h3>Sua Avaliação</h3>
+                <p>5.0⭐</p>
+            </div>
+            <div class="item">
+                <h3>Item</h3>
+                <p>Você não possui avaliação pendente.</p>
+            </div>
+        </section>
+
+        <section class="categorias">
+            <h2>Categorias</h2>
+            <!-- Adicionar ícones de categorias aqui -->
+        </section>
+    </main>
+    
+    <footer>
+        <!-- Adicionar navegação do rodapé aqui -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

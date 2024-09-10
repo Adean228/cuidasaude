@@ -1,0 +1,129 @@
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #2d9cdb;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 40px;
+}
+
+header .menu-icon {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+header .profile-info {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+header .profile-info img {
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+header .profile-info .notification {
+    font-size: 1.5rem;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+header .profile-info h2 {
+    font-size: 1.2rem;
+}
+
+/* Estilos do Container */
+.container {
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2d9cdb;
+}
+
+/* Estilos dos Labels e Inputs */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Estilos dos Botões */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2d9cdb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2384b6;
+}
+
+/* Estilos da Tela de Sucesso */
+.success-screen {
+    display: none;
+    text-align: center;
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    margin: 100px auto;
+}
+
+.success-screen h2 {
+    color: #2d9cdb;
+    margin-bottom: 30px;
+}

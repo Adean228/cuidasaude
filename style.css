@@ -1,0 +1,247 @@
+/* Configurações gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.light-theme {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --primary-color: #00aaff;
+}
+
+.dark-theme {
+    --bg-color: #333;
+    --text-color: #f4f4f4;
+    --primary-color: #00aaff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Estilo da tela de login */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container .logo img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--primary-color);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0077cc;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo da tela de seleção de perfil */
+.profile-selection-container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header img.logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.profiles {
+    display: flex;
+    justify-content: space-around;
+}
+
+.profile-option {
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 20px;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.profile-option:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
+}
+/* Estilos dos balões */
+.balloon {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.balloon1 {
+    width: 300px;
+    height: 300px;
+    background-color: #00a39a;
+    top: -100px;
+    left: -100px;
+}
+
+.balloon2 {
+    width: 200px;
+    height: 200px;
+    background-color: #a5f09f;
+    top: 50px;
+    left: 50px;
+}
+
+.balloon3 {
+    width: 300px;
+    height: 300px;
+    background-color: #00a39a;
+    bottom: -100px;
+    right: -100px;
+}
+
+.balloon4 {
+    width: 200px;
+    height: 200px;
+    background-color: #a5f09f;
+    bottom: 50px;
+    right: 50px;
+}
+.profile-option img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.profile-option p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Tema escuro */
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #ccc;
+}
+
+.dark-theme .login-container {
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme input[type="text"],
+.dark-theme input[type="password"],
+.dark-theme input[type="email"] {
+    background-color: #555;
+    color: #fff;
+    border-color: #666;
+}
+
+.dark-theme input[type="text"]::placeholder,
+.dark-theme input[type="password"]::placeholder,
+.dark-theme input[type="email"]::placeholder {
+    color: #ccc;
+}
+
+.dark-theme button {
+    background-color: #0077cc;
+}
+
+.dark-theme button:hover {
+    background-color: #005fa3;
+}
+
+.dark-theme a {
+    color: #00aaff;
+}
+
+/* Tema claro */
+body.light-theme {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.light-theme .login-container {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme input[type="text"],
+.light-theme input[type="password"],
+.light-theme input[type="email"] {
+    background-color: white;
+    color: #333;
+    border-color: #ccc;
+}
+
+.light-theme input[type="text"]::placeholder,
+.light-theme input[type="password"]::placeholder,
+.light-theme input[type="email"]::placeholder {
+    color: #999;
+}
+
+.light-theme button {
+    background-color: #00aaff;
+}
+
+.light-theme button:hover {
+    background-color: #0077cc;
+}
+
+.light-theme a {
+    color: #00aaff;
+}

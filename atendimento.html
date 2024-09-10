@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação de Atendimento - Cuida Saúde</title>
+    <link rel="stylesheet" href="atendimento.css">
+</head>
+<body>
+    <header>
+        <span class="menu-icon">☰</span>
+        <img src="logo.jpeg" alt="Logo Cuida Saúde">
+        <div class="profile-info">
+            <img src="perfil.jpeg" alt="Foto de Perfil">
+            <div>
+                <h2>OLÁ, MARCOS!</h2>
+                <div class="rating">5,0 ★</div>
+            </div>
+            <span class="notification">🔔</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Solicitação de Atendimento</h2>
+        <form id="solicitacaoForm">
+            <!-- Campo Nome -->
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            
+            <!-- Campo Endereço -->
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço" required>
+
+            <!-- Campo de Descrição -->
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" placeholder="Descreva o motivo do atendimento" rows="4" required></textarea>
+
+            <!-- Opções de Atendimento -->
+            <label for="opcao-atendimento">Opções de Atendimento:</label>
+            <select id="opcao-atendimento" name="opcao-atendimento" required>
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="opcao1">Consulta de Rotina</option>
+                <option value="opcao2">Emergência</option>
+                <option value="opcao3">Vacinação</option>
+                <option value="opcao4">Exames</option>
+                <option value="opcao5">Fisioterapia</option>
+                <option value="opcao6">Atendimento Domiciliar</option>
+                <option value="opcao7">Acompanhamento Nutricional</option>
+                <option value="opcao8">Saúde Mental</option>
+                <option value="opcao9">Outros</option>
+            </select>
+
+            <!-- Seleção de Data e Horário -->
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required>
+            
+            <label for="horario">Horário:</label>
+            <input type="time" id="horario" name="horario" required>
+
+            <!-- Seleção de Profissional -->
+            <label for="profissional">Escolha o Profissional:</label>
+            <select id="profissional" name="profissional" required>
+                <option value="" disabled selected>Selecione um profissional</option>
+                <option value="prof1">Dr. Ana Silva - Cardiologista</option>
+                <option value="prof2">Dr. Pedro Oliveira - Pediatra</option>
+                <option value="prof3">Dra. Maria Souza - Dermatologista</option>
+                <option value="prof4">Dr. João Santos - Ortopedista</option>
+                <option value="prof5">Dra. Clara Pereira - Nutricionista</option>
+                <option value="prof6">Dr. Luís Costa - Psicólogo</option>
+                <option value="prof7">Dra. Fernanda Lima - Ginecologista</option>
+                <option value="prof8">Dr. Marcos Mendes - Urologista</option>
+                <option value="prof9">Dra. Larissa Ferreira - Endocrinologista</option>
+                <option value="prof10">Dr. Eduardo Ramos - Neurologista</option>
+                <option value="prof11">Dra. Juliana Carvalho - Fisioterapeuta</option>
+                <option value="prof12">Dr. Ricardo Almeida - Otorrinolaringologista</option>
+                <option value="prof13">Dra. Paula Martins - Oncologista</option>
+                <option value="prof14">Dr. Felipe Gomes - Reumatologista</option>
+                <option value="prof15">Dra. Camila Fernandes - Psiquiatra</option>
+            </select>
+
+            <!-- Botão de Gerar PDF -->
+            
+
+            <!-- Botão de Concluir -->
+            <button type="button" onclick="concluirAtendimento()">Concluir</button>
+        </form>
+        
+    </div>
+
+    <!-- Tela de Sucesso -->
+    <div id="successScreen" class="success-screen">
+        <h2>Atendimento agendado com sucesso!</h2>
+        <button onclick="voltarInicio()">Voltar ao Início</button>
+    </div>
+    <script src="script.js"></script>
+   
+</body>
+</html>
