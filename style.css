@@ -128,7 +128,7 @@ header img.logo {
     position: absolute;
     border-radius: 50%;
     opacity: 0.8;
-    z-index: 1;
+    z-index: -1;
 }
 
 .balloon1 {
@@ -244,4 +244,120 @@ body.light-theme {
 
 .light-theme a {
     color: #00aaff;
+}
+/* Moldura redonda para a imagem de perfil */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover;  /* Garante que a imagem preencha a moldura */
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
+/* Botão de upload */
+.upload-btn {
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.upload-btn:hover {
+    background-color: #45a049;
+}
+/* Estilos básicos para o formulário de cadastro */
+.login-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 150px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    background-color: #2d9cdb;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1a73e8;
+}
+
+/* Estilos para o botão de adicionar foto */
+.foto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.btn-foto {
+    background-color: #2d9cdb;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+}
+
+.foto-preview {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.foto-preview img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
 }

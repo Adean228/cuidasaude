@@ -9,8 +9,11 @@
 <body class="light-theme">
     <div class="login-container">
         <div class="logo">
-            <img src="prestador.png" alt="Cuida Saúde">
+            <img id="profile-preview" class="profile-pic" src="prestador.png" alt="Cuida Saúde">
         </div>
+        <input type="file" id="profile-pic-upload" accept="image/*" onchange="previewImage(event)" style="display: none;">
+        <label for="profile-pic-upload" class="upload-btn">Escolher Foto</label> <!-- Botão de upload -->
+
         <h2>Cadastro de Prestador</h2>
         <form onsubmit="return cadastrar(event)">
             <label for="nome">Nome</label>
@@ -24,11 +27,32 @@
 
             <label for="especialidade">Especialidade</label>
             <input type="text" id="especialidade" required>
-            
-            <button type="submit"></button>
+
+            <button type="submit">Criar Conta</button>
         </form>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function previewImage(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const preview = document.getElementById('profile-preview');
+                preview.src = reader.result;
+                localStorage.setItem('fotoPrestador', reader.result); // Salva a foto no LocalStorage
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+
+        function cadastrar(event) {
+            event.preventDefault();
+            const nome = document.getElementById('nome').value;
+
+            // Salva o nome e a foto no LocalStorage
+            localStorage.setItem('nomePrestador', nome);
+
+            // Redireciona para a página de serviços prestador
+            window.location.href = 'prestadordeserviços.html';
+        }
+    </script>
 </body>
 </html>

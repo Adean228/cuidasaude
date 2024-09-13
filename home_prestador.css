@@ -1,0 +1,148 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o corpo da aplicação */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+}
+
+/* Container principal da tela */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    margin: auto;
+    position: relative;
+}
+
+/* Barra Superior com saudação e ícones */
+.barra-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007BFF;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.usuario-info {
+    display: flex;
+    align-items: center;
+}
+
+.usuario-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.icon .btn-icon {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.icon .btn-icon:hover {
+    color: #ccc;
+}
+
+/* Conteúdo principal */
+.conteudo {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Tabela de atendimentos */
+.atendimentos table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.atendimentos th, .atendimentos td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.atendimentos th {
+    background-color: #007BFF;
+    color: white;
+}
+
+.atendimentos td {
+    background-color: #f9f9f9;
+}
+
+/* Área de Avaliações */
+.avaliacoes {
+    text-align: center;
+}
+
+.avaliacoes h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.avaliacoes p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Botão de ver avaliações */
+.btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Layout responsivo */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .atendimentos th, .atendimentos td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .avaliacoes h2 {
+        font-size: 18px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}

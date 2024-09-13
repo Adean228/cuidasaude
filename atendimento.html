@@ -11,14 +11,15 @@
         <span class="menu-icon">☰</span>
         <img src="logo.jpeg" alt="Logo Cuida Saúde">
         <div class="profile-info">
-            <img src="perfil.jpeg" alt="Foto de Perfil">
+            <img id="profile-pic" src="perfil.jpeg" alt="Foto de Perfil">
             <div>
-                <h2>OLÁ, MARCOS!</h2>
+                <h2>OLÁ, <span id="user-name">Marcos</span>!</h2>
                 <div class="rating">5,0 ★</div>
             </div>
             <span class="notification">🔔</span>
         </div>
     </header>
+    
 
     <div class="container">
         <h2>Solicitação de Atendimento</h2>
@@ -78,21 +79,48 @@
                 <option value="prof15">Dra. Camila Fernandes - Psiquiatra</option>
             </select>
 
-            <!-- Botão de Gerar PDF -->
-            
-
             <!-- Botão de Concluir -->
-            <button type="button" onclick="concluirAtendimento()">Concluir</button>
+            <button type="submit">Concluir</button>
         </form>
-        
     </div>
 
-    <!-- Tela de Sucesso -->
-    <div id="successScreen" class="success-screen">
-        <h2>Atendimento agendado com sucesso!</h2>
-        <button onclick="voltarInicio()">Voltar ao Início</button>
-    </div>
+    <script>
+        // Função para carregar a foto e o nome do localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const nomeUsuario = localStorage.getItem('nomeUsuario');
+            const fotoUsuario = localStorage.getItem('fotoUsuario');
+            
+            // Se o nome do usuário existir no localStorage, substitui o texto padrão
+            if (nomeUsuario) {
+                document.getElementById('user-name').textContent = 'OLÁ, ${nomeUsuario.toUpperCase()}!';
+                document.getElementById('nome').value = nomeUsuario; // Preenche o campo "Nome"
+            }
+            
+            // Se a foto do usuário existir no localStorage, altera a foto de perfil
+            if (fotoUsuario) {
+                document.getElementById('profile-pic').src = fotoUsuario;
+            }
+        });
+
+        // Função de concluir atendimento
+        function concluirAtendimento() {
+            alert("Seu atendimento foi agendado com sucesso!");
+        }
+
+        function voltarInicio() {
+            document.getElementById('solicitacaoForm').reset();
+            document.getElementById('solicitacaoForm').style.display = 'block';
+            document.getElementById('successScreen').style.display = 'none';
+        }
+
+        // Função para sair da conta
+        function sairDaConta() {
+            localStorage.removeItem('nomeUsuario');
+            localStorage.removeItem('fotoUsuario');
+            window.location.href = 'index.html'; // Redireciona para a tela de login
+        }
+    </script>
+
     <script src="script.js"></script>
-   
 </body>
 </html>

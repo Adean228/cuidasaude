@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliações</title>
+    <link rel="stylesheet" href="avaliacoes.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Avaliações de Dr. Marcos</h1>
+
+        <div class="avaliacoes">
+            <div class="avaliacao">
+                <h3>Maria Silva</h3>
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>"Ótimo atendimento, muito atencioso e cuidadoso com os detalhes."</p>
+            </div>
+
+            <div class="avaliacao">
+                <h3>João Santos</h3>
+                <p>⭐⭐⭐⭐☆</p>
+                <p>"Gostei da consulta, mas o tempo de espera foi um pouco longo."</p>
+            </div>
+
+            <div class="avaliacao">
+                <h3>Ana Oliveira</h3>
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>"Excelente, me explicou tudo com muita clareza."</p>
+            </div>
+
+            <div class="avaliacao">
+                <h3>Carlos Almeida</h3>
+                <p>⭐⭐⭐⭐☆</p>
+                <p>"Ótimo profissional, só poderia ser mais pontual."</p>
+            </div>
+        </div>
+
+        <button onclick="goBack()">Voltar</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        // Função para carregar o nome do prestador do localStorage e atualizar o título
+        document.addEventListener("DOMContentLoaded", function() {
+            const nomePrestador = localStorage.getItem('nomePrestador');
+            const titleElement = document.getElementById('title');
+            
+            if (nomePrestador) {
+                titleElement.textContent = `Avaliações de Dr. ${nomePrestador}`;
+            }
+        });
+    </script>
+</body>
+</html>

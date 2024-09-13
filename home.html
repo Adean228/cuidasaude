@@ -9,10 +9,10 @@
 <body class="light-theme">
     <header>
         <div class="profile-pic">
-            <img src="perfil.jpeg" alt="Foto do Perfil">
+            <img id="profile-pic" src="fotoUsuario.jpg" alt="Foto do Perfil"> <!-- Remove a imagem padrão -->
         </div>
         <div class="welcome">
-            <h1>Olá, Marcos!</h1>
+            <h1 id="welcome-message">Olá!</h1> <!-- O nome será inserido aqui -->
             <div class="icons">
                 <span class="heart">❤️</span>
                 <span class="rating">5.0⭐</span>
@@ -50,6 +50,26 @@
     <footer>
         <!-- Adicionar navegação do rodapé aqui -->
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obtém o nome do usuário e a foto armazenados no LocalStorage
+            const nomeUsuario = localStorage.getItem('nomeUsuario');
+            const fotoUsuario = localStorage.getItem('fotoUsuario');
+
+            // Se o nome do usuário existir, ele será exibido no elemento com o ID 'welcome-message'
+            if (nomeUsuario) {
+                document.getElementById('welcome-message').textContent = `Olá, ${nomeUsuario}!`;
+            } else {
+                document.getElementById('welcome-message').textContent = "Olá!"; // Texto padrão caso o nome não exista
+            }
+
+            // Se a foto do usuário existir, ela será exibida na imagem com o ID 'profile-pic'
+            if (fotoUsuario) {
+                document.getElementById('profile-pic').src = fotoUsuario;
+            }
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>

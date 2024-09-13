@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuida Saúde - Prestador de Serviço</title>
+    <link rel="stylesheet" href="prestador.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Barra Superior com Foto de Perfil e Saudações -->
+        <div class="barra-superior">
+            <div class="usuario-info">
+                <img id="foto-perfil" src="perfil_prestador.jpg" alt="Foto de Perfil">
+                <span id="saudacao">Olá, </span>
+            </div>
+            <div class="icon">
+                <button id="notificacoes" class="btn-icon">🔔</button>
+                <button id="configuracoes" class="btn-icon">⚙️</button>
+            </div>
+        </div>
+
+        <!-- Conteúdo Principal da Tela -->
+        <div class="conteudo">
+            <h1>Atendimentos Agendados</h1>
+            <div class="atendimentos">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Paciente</th>
+                            <th>Data</th>
+                            <th>Hora</th>
+                            <th>Tipo de Atendimento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Maria Silva</td>
+                            <td>20/08/2024</td>
+                            <td>10:30</td>
+                            <td>Consulta Médica</td>
+                        </tr>
+                        <tr>
+                            <td>João Santos</td>
+                            <td>21/08/2024</td>
+                            <td>14:00</td>
+                            <td>Exame de Rotina</td>
+                        </tr>
+                        <!-- Mais atendimentos podem ser adicionados aqui -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="avaliacoes">
+                <h2>Minhas Avaliações</h2>
+                <p>⭐⭐⭐⭐☆ (4.5) - 200 Avaliações</p>
+                <button id="ver-avaliacoes" class="btn">Ver Avaliações</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scriptprestador.js"></script>
+</body>
+</html>

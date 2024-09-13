@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Agendamento</title>
+    <link rel="stylesheet" href="confirmacao.css">
+</head>
+<body>
+    <div class="confirmation-container">
+        <div class="confirmation-card">
+            <h1>Consulta Agendada com Sucesso!</h1>
+            <p>Obrigado por agendar sua consulta.</p>
+            <p>Aqui estão os detalhes da sua consulta:</p>
+            <div class="appointment-details">
+                <p><strong>Nome:</strong> <span id="doctor-name">Não disponível</span></p>
+                <p><strong>Endereço:</strong> <span id="address">Não disponível</span></p>
+                <p><strong>Descrição:</strong> <span id="description">Não disponível</span></p>
+                <p><strong>Opção de Atendimento:</strong> <span id="opcao-atendimento">Não disponível</span></p>
+                <p><strong>Data:</strong> <span id="appointment-date">Não disponível</span></p>
+                <p><strong>Hora:</strong> <span id="appointment-time">Não disponível</span></p>
+                <p><strong>Profissional:</strong> <span id="professional">Não disponível</span></p>
+            </div>
+            <button onclick="window.location.href='home.html'">Voltar para tela home</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
